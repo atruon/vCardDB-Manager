@@ -98,7 +98,7 @@ class noDBModel():
 class ContactModel():
     def __init__(self, userName=None, pw=None, dbName=None):
     # Create a database in RAM.
-        self.conn =  mysql.connector.connect(host="dursley.socs.uoguelph.ca",database=dbName,user=userName,password=pw)
+        self.conn =  mysql.connector.connect(host="MY_SQL_HOST_HERE",database=dbName,user=userName,password=pw)
         self.conn.autocommit = True
         self.cursor = self.conn.cursor()
         createQueryFile = "CREATE TABLE IF NOT EXISTS file ( \
